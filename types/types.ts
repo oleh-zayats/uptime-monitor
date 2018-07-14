@@ -5,7 +5,6 @@ export interface RequestHandler {
 
 /**
  * Generic map types
- * key: String, value: T
  */
 export interface GenericStringMap<T> { 
   [key: string]: T; 
@@ -15,22 +14,43 @@ export interface GenericNumberMap<T> {
 }
 
 /**
- * key: String, value: Any
+ * key: String, value: RequestHandler
  */
-
-export interface RequestHandlerMap extends GenericStringMap<RequestHandler> {}
+export interface RequestHandlerMap extends GenericStringMap<RequestHandler> {
+}
 
 /**
- * key: String, value: Any
+ * key: String, value: Any OR
+ * key: Number, value: Any
  */
-export interface StringAnyMap extends GenericStringMap<any> {}
-export interface NumberAnyMap extends GenericNumberMap<any> {}
+export interface StringAnyMap extends GenericStringMap<any> {
+}
+export interface NumberAnyMap extends GenericNumberMap<any> {
+}
 
-export interface StringStringMap extends GenericStringMap<string> {}
-export interface NumberStringMap extends GenericNumberMap<string> {}
+/**
+ * key: String, value: String OR
+ * key: Number, value: String
+ */
+export interface StringStringMap extends GenericStringMap<string> {
+}
+export interface NumberStringMap extends GenericNumberMap<string> {
+}
 
-export interface StringNumberMap extends GenericStringMap<number> {}
-export interface NumberNumberMap extends GenericNumberMap<number> {}
+/**
+ * key: String, value: Number OR
+ * key: Number, value: Number
+ */
+export interface StringNumberMap extends GenericStringMap<number> {
+}
+export interface NumberNumberMap extends GenericNumberMap<number> {
+}
 
-export interface StringBooleanMap extends GenericStringMap<boolean> {}
-export interface NumberBooleanMap extends GenericNumberMap<boolean> {}
+/**
+ * key: String, value: Boolean OR
+ * key: Number, value: Boolean
+ */
+export interface StringBooleanMap extends GenericStringMap<boolean> {
+}
+export interface NumberBooleanMap extends GenericNumberMap<boolean> {
+}
