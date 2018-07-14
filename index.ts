@@ -68,7 +68,7 @@ let server = (req: http.IncomingMessage, res: http.ServerResponse) => {
         ? router[trimmedPath]
         : router["notFound"];
 
-    let dataObject: Types.Dictionary = {
+    let dataObject: Types.StringAnyMap = {
       method: method,
       trimmedPath: trimmedPath,
       parameters: parameters,
@@ -85,7 +85,7 @@ let server = (req: http.IncomingMessage, res: http.ServerResponse) => {
   });
 };
 
-let router: Types.HandlerMap = {
+let router: Types.RequestHandlerMap = {
   ping: requestHandlers.ping,
   users: requestHandlers.users,
   notFound: requestHandlers.notFound

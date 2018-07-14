@@ -25,7 +25,7 @@ export function users(data, callback) {
   }
 }
 
-let _users: Types.HandlerMap = {
+let _users: Types.RequestHandlerMap = {
   GET: usersGET,
   POST: usersPOST,
   PUT: usersPUT,

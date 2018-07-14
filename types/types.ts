@@ -18,7 +18,7 @@ export interface GenericNumberMap<T> {
  * key: String, value: Any
  */
 
-export interface HandlerMap extends GenericStringMap<RequestHandler> {}
+export interface RequestHandlerMap extends GenericStringMap<RequestHandler> {}
 
 /**
  * key: String, value: Any
